@@ -1,0 +1,8 @@
+bin/
+obj/
+.idea/
+.vscode/
+.dockerignore
+.env
+Dockerfile
+docker-compose.yml

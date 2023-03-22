@@ -1,0 +1,16 @@
+networks:
+  peephole-network:
+    name: peephole-network
+    driver: bridge
+services:
+  peephole:
+    build: .
+    image: peephole:debug
+    container_name: peephole
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5080:5080"
+    networks:
+      - peephole-network
+    restart: unless-stopped
